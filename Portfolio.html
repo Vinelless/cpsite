@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvin Portfolio</title>
+    <link rel="stylesheet" href="cry.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Arvin();</h1>
+            <div class="burger-menu" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Portfolio.html">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Past Project Experience</h2>
+                <p>Explore the projects I've worked on so far</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="projects">
+        <div class="container">
+            <div class="project">
+                <img src="images/us.png" alt="Personal Website">
+                <h3>Image Uploader</h3>
+                <p>My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.</p>
+                <ul class="skills">
+                    <li>VueJS 3</li>
+                    <li>Tailwind</li>
+                </ul>
+                <a href="https://vinelless.github.io/tester/" class="btn">View Project</a>
+            </div>
+
+            <div class="project">
+                <img src="images/File Upload - Google Chrome 6_27_2024 11_37_03 PM.png" alt="Sahabat Muslim">
+                <h3>Webforbeginner</h3>
+                <p>A website that has a responsive display to make it easier for Muslims to read the Quran from anywhere.</p>
+                <ul class="skills">
+                    <li>VueJS 3</li>
+                    <li>Tailwind</li>
+                </ul>
+                <a href="https://vinelless.github.io/Webforbeginner/" class="btn">View Project</a>
+            </div>
+
+            <div class="project">
+                <img src="images/project-3.png" alt="SISTEKDES">
+                <h3>SISTEKDES</h3>
+                <p>Sistem Informasi dan Teknologi Desa, a web application to assist village government work in administration, population data management, community services, etc.</p>
+                <ul class="skills">
+                    <li>Laravel 9</li>
+                    <li>Bootstrap</li>
+                </ul>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <div class="project">
+                <img src="images/project-4.png" alt="Bumdesma">
+                <h3>Bumdesma</h3>
+                <p>A web application used by village-owned enterprises at the sub-district level to make it easier for them in terms of accounting that is equipped with a microfinance balance.</p>
+                <ul class="skills">
+                    <li>Laravel 9</li>
+                    <li>Bootstrap</li>
+                </ul>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <div class="project">
+                <img src="images/project-5.png" alt="SP2SE">
+                <h3>SP2SE</h3>
+                <p>Sistem Percepatan Pelayanan Surat Elektronik, A web application to manage letters in the village.</p>
+                <ul class="skills">
+                    <li>Codeigniter 3</li>
+                    <li>Bootstrap</li>
+                </ul>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Arvin Taladtad. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
