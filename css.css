@@ -1,0 +1,184 @@
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #111;
+    padding: 20px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add padding to prevent content from touching the edges on smaller screens */
+}
+
+.logo {
+    color: #ffc107;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffc107;
+    text-decoration: underline;
+}
+
+/* Burger menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation links for mobile */
+nav ul {
+    display: flex;
+}
+
+nav ul.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add padding to prevent content from touching the edges */
+}
+
+.content {
+    text-align: center;
+    max-width: 100%; /* Ensure content does not exceed the viewport width */
+    overflow-wrap: break-word; /* Break long words to fit within the container */
+    word-wrap: break-word; /* Compatibility for older browsers */
+    word-break: break-word; /* Break words at arbitrary points */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 300px; /* Ensure image does not exceed the container */
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    padding: 0 20px; /* Add padding to ensure text does not touch the edges */
+    max-width: 100%; /* Ensure text does not exceed the viewport width */
+}
+
+.tech-stack {
+    margin: 20px 0;
+}
+
+.skills, .tools {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.skill, .tool {
+    text-align: center;
+    margin: 10px;
+}
+
+.skill img, .tool img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.skill span, .tool span {
+    display: block;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .profile-image img {
+        width: 250px; /* Adjust image size for smaller screens */
+        height: 250px;
+    }
+
+    p {
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+}
