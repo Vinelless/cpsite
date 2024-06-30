@@ -1,0 +1,208 @@
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #111;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add padding to prevent content from touching the edges on smaller screens */
+}
+
+.logo {
+    color: #ffc107;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffc107;
+    text-decoration: underline;
+}
+
+/* Burger menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation links for mobile */
+nav ul {
+    display: flex;
+}
+
+nav ul.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; /* Adjust padding for better spacing on smaller screens */
+}
+
+.hero {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text */
+}
+
+.hero-content {
+    margin-bottom: 20px; /* Add margin bottom to separate from the image */
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.hero-content h3 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    margin-bottom: 20px;
+    min-height: 1em;
+    display: inline-block;
+}
+
+.hero-content p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    line-height: 1.4; /* Adjust line height for better readability */
+}
+
+.hero-image {
+    position: relative;
+    width: 250px; /* Adjust width for smaller screens */
+    height: 250px; /* Adjust height for smaller screens */
+    margin: 20px 0; /* Add margin for better spacing on smaller screens */
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .container {
+        padding: 0; /* Remove padding for larger screens */
+    }
+
+    .hero {
+        flex-direction: row; /* Keep elements stacked horizontally on larger screens */
+        text-align: left; /* Align text to the left on larger screens */
+    }
+
+    .hero-content {
+        margin-right: 50px;
+        margin-bottom: 0; /* Remove bottom margin on larger screens */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Restore original font size */
+    }
+
+    .hero-content h2 {
+        font-size: 3rem; /* Restore original font size */
+    }
+
+    .hero-content h3 {
+        font-size: 1.5rem; /* Restore original font size */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Restore original font size */
+        line-height: 1.6; /* Restore original line height */
+    }
+
+    .hero-image {
+        width: 400px; /* Restore original size */
+        height: 400px; /* Restore original size */
+        margin: 0; /* Remove margin for larger screens */
+    }
+}
