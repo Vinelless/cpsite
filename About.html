@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Arvin();</a>
+            <nav>
+                <div class="burger-menu" id="burgerMenu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <ul id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Portfolio.html">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-container">
+        <div class="content">
+            <h1>Arvin Taladtad</h1>
+            
+            <div class="profile-image">
+                <a href="https://www.facebook.com/arvin.carandang.165?mibextid=ZbWKwL">
+                    <img src="images/vin.jpg" alt="Arvin's Profile Image">
+                </a>
+            </div>
+        
+            <p>Hi everyone! My name is Arvin. I'm a web developer from Bogor,<br> West Java. I have 1 year of experience in back-end web development. <br> I really enjoy what I do right now. In my opinion, creating programs is not just a job,<br> but also an art that has aesthetic value.</p>
+            <p>My job is to build your website to be attractive. Additionally,<br> I ensure that the website achieves its goals in conveying your message, <br> and if you're interested, check out my blog.</p>
+ 
+            <h2>Skills</h2>
+            
+            <div class="tech-stack">
+                <button onclick="toggleSkills()">Tech Stack</button>
+                <button onclick="toggleTools()">Tools</button>
+            </div>
+        
+            <div class="skills" id="skills">
+                <div class="skill">
+                    <img src="images/html.png" alt="HTML">
+                    <span>HTML</span>
+                </div>
+                <div class="skill">
+                    <img src="images/css.png" alt="CSS">
+                    <span>CSS</span>
+                </div>
+                <div class="skill">
+                    <img src="images/php.png" alt="PHP">
+                    <span>PHP</span>
+                </div>
+                <div class="skill">
+                    <img src="images/js.png" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+            </div>
+            
+            <div class="tools" id="tools">
+                <div class="tool">
+                    <img src="images/icons8-visual-studio-128 (1).png" alt="VSCode">
+                    <span>VSCode</span>
+                </div>
+                <div class="tool">
+                    <img src="images/icons8-github-128.png" alt="Github">
+                    <span>Github</span>
+                </div>
+                <div class="tool">
+                    <img src="images/icons8-mysql-128.png" alt="MySQL">
+                    <span>MySQL</span>
+                </div>
+                <div class="tool">
+                    <img src="images/icons8-visual-studio-128.png" alt="VSStudio">
+                    <span>Visual Studio</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function toggleSkills() {
+            const skills = document.getElementById('skills');
+            if (skills.style.display === 'none' || skills.style.display === '') {
+                skills.style.display = 'flex';
+            } else {
+                skills.style.display = 'none';
+            }
+        }
+
+        function toggleTools() {
+            const tools = document.getElementById('tools');
+            if (tools.style.display === 'none' || tools.style.display === '') {
+                tools.style.display = 'flex';
+            } else {
+                tools.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+
+            // Load theme from local storage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                body.classList.add(savedTheme);
+            }
+
+            // Burger menu toggle
+            const burgerMenu = document.getElementById('burgerMenu');
+            const navLinks = document.getElementById('navLinks');
+            burgerMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
